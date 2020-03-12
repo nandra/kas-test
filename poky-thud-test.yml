@@ -12,6 +12,11 @@ repos:
       meta-poky:
       meta-yocto-bsp:
   meta-custom:
+bblayers_conf_header:
+  standard: |
+    POKY_BBLAYERS_CONF_VERSION = "2"
+    BBPATH = "${TOPDIR}"
+    BBFILES ?= ""
 local_conf_header:
   custom: |
       IMAGE_FEATURES_append = " debug-tweaks"
